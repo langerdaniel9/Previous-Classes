@@ -1,0 +1,9 @@
+RTX_3080 699
+Play_Station 499
+"Heidi" 14.99	
+iPad_Pro 999
+Kindle_Oasis 199.99
+EosR5 3899
+tv 1200
+test 555
+newItem 1750

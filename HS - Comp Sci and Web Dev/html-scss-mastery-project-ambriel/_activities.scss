@@ -1,0 +1,253 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#activities {
+  scroll-margin-top: 7rem;
+}
+
+.section_4 {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.act-header {
+  @include flex-col text-align: center;
+  height: 50vw;
+  justify-content: center;
+  background-image: url("/img/actcover.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: auto 5rem;
+  background-size: cover;
+}
+
+.act-title {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  animation: text 3s 1;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0 10px black, 2px 2px 20px rgba(black, 0.6);
+}
+
+.act-subtitle {
+  font-size: 3rem;
+  color: $act-color;
+  font-weight: 500;
+}
+
+@keyframes text {
+  0% {
+    margin-bottom: 3rem;
+  }
+  30% {
+    letter-spacing: 2.5rem;
+    margin-bottom: 7rem;
+  }
+  70% {
+    letter-spacing: 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.act-section {
+  background-color: $background-act;
+  display: flex;
+  box-sizing: border-box;
+  height: 50vh;
+}
+
+.checklist {
+  color: $text-white;
+  font-size: 3rem;
+  font-family: $main-font;
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 6%;
+  width: calc(30vw - 5vh);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.checklist input {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  top: 25;
+  left: 5%;
+  cursor: pointer;
+  background-color: initial;
+  appearance: checkbox;
+  margin: 0.3rem 0.3rem 0.3rem 0.4rem;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  display: inline-block;
+  text-align: start;
+}
+
+.act-section-1 {
+  background-color: $background-act2;
+}
+
+.act-section-3 {
+  background-color: $background-act2;
+}
+
+.act-pic {
+  display: flex;
+  align-items: center;
+  width: 70vw;
+}
+
+.venice-pic {
+  position: absolute;
+  width: 30rem;
+  box-shadow: 0 1.5rem 1.5rem $box-shading;
+  outline-offset: 1rem;
+  transition: all 0.3s;
+}
+
+.venice-pic:hover {
+  transform: scale(1.3);
+  box-shadow: 0 1.3rem 1rem $text-black;
+  z-index: 2;
+}
+
+.act-pic:hover .venice-pic:not(:hover) {
+  transform: scale(0.8);
+  opacity: 0.3;
+}
+
+.venice-pic-1 {
+  right: 17%;
+}
+.venice-pic-2 {
+  right: 6%;
+}
+
+.venice-pic-3 {
+  margin-top: 5rem;
+  right: 30%;
+  height: 25rem;
+}
+
+.venice-pic-4 {
+  right: 40%;
+}
+
+.vatican-pic {
+  position: absolute;
+  width: 30rem;
+  box-shadow: 0 1.5rem 1.5rem $box-shading;
+  outline-offset: 1rem;
+  transition: all 0.3s;
+}
+
+.vatican-pic:hover {
+  transform: scale(1.3);
+  box-shadow: 0 1.3rem 1rem $text-black;
+  z-index: 4;
+}
+
+.act-pic:hover .vatican-pic:not(:hover) {
+  transform: scale(0.8);
+  opacity: 0.3;
+}
+
+.vatican-pic-2 {
+  right: 13%;
+}
+.vatican-pic-1 {
+  right: 3%;
+}
+
+.vatican-pic-3 {
+  right: 25%;
+  height: 40rem;
+}
+
+.vatican-pic-4 {
+  right: 36%;
+}
+
+.dolomites-pic {
+  position: absolute;
+  height: 25rem;
+  box-shadow: 0 1.5rem 1.5rem $box-shading;
+  outline-offset: 1rem;
+  transition: all 0.3s;
+}
+
+.dolomites-pic:hover {
+  transform: scale(1.3);
+  box-shadow: 0 1.3rem 1rem $text-black;
+  z-index: 4;
+}
+
+.act-pic:hover .dolomites-pic:not(:hover) {
+  transform: scale(0.8);
+  opacity: 0.3;
+}
+
+.dolomites-pic-1 {
+  right: 15%;
+  margin-top: -5rem;
+}
+
+.dolomites-pic-3 {
+  right: 40%;
+}
+
+.dolomites-pic-2 {
+  margin-top: 6rem;
+  right: 30%;
+}
+
+.dolomites-pic-4 {
+  right: 3%;
+  margin-top: 3rem;
+}
+
+.cinque-pic {
+  position: absolute;
+  width: 30rem;
+  box-shadow: 0 1.5rem 1.5rem $box-shading;
+  outline-offset: 1rem;
+  transition: all 0.3s;
+}
+
+.cinque-pic:hover {
+  transform: scale(1.3);
+  box-shadow: 0 1.3rem 1rem $text-black;
+  z-index: 4;
+}
+
+.act-pic:hover .cinque-pic:not(:hover) {
+  transform: scale(0.8);
+  opacity: 0.3;
+}
+
+.cinque-pic-1 {
+  right: 13%;
+}
+.cinque-pic-2 {
+  right: 3%;
+  margin-top: -6rem;
+}
+
+.cinque-pic-4 {
+  right: 25%;
+  margin-top: 5rem;
+}
+
+.cinque-pic-3 {
+  right: 36%;
+  width: 35rem;
+}

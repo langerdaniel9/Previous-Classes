@@ -1,0 +1,22 @@
+import math
+
+print("Enter value:")
+var1 = input()
+print("Enter value:")
+var2 = input()
+
+var3 = int(var1) + int(var2)
+print("Sum:")
+print(var3)
+var4 = int(var1) - int(var2)
+print("Difference:")
+print(var4)
+var5 = int(var1) * int(var2)
+print("Product:")
+print (var5)
+var6 = int(var1) / int(var2)
+print("Quotient:")
+print (var6)
+var7 = math.sqrt(var3)
+print("Square root of the sum of both numbers:")
+print (var7)

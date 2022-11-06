@@ -1,0 +1,60 @@
+$color: (
+  primary: #45a29e,
+  primary-light: #66fcf1,
+);
+
+@function color($color-name) {
+  @return map-get($color, $color-name);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; //50% on mobile
+  font-family: "Josefin Sans", sans-serif;
+  background-color: black;
+}
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(color(primary), 0.5),
+      rgba(color(primary-light), 0.5)
+    ),
+    url(img/headphones-bg.jpg);
+  background-size: cover;
+  //background-position: center;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+}
+
+.header-text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-primary {
+  font-size: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.header-primary-main {
+  display: block;
+  letter-spacing: 1rem;
+  text-shadow: #333 6px 6px;
+}
+
+.header-primary-sub {
+  font-size: 4rem;
+}

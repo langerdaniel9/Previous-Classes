@@ -1,0 +1,9 @@
+bib
+nun 
+madam 
+racecar 
+civic 
+NASCAR 
+laptop 
+computer
+person

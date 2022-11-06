@@ -1,0 +1,206 @@
+@import "_variables.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: $background;
+  font-family: $font2;
+}
+
+header {
+  font-family: $font1;
+  text-decoration: underline;
+}
+
+a.active {
+  color: $secondary;
+}
+
+.header-button {
+  font-size: 4rem;
+  width: calc(10 / 3%);
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.header-main {
+  padding: 0;
+  margin: 0 auto;
+  height: 6vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/////////////////////////////////////////////////
+
+.button-popup-text {
+  width: 80%;
+  margin: auto;
+}
+.button-popup-image-img {
+  width: 80%;
+  height: 70%;
+}
+
+///-------------------------------------------
+
+/* Unopened lightbox */
+.button-popup {
+  display: none;
+  z-index: 3;
+}
+
+/* Opened lightbox */
+.button-popup:target {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lightbox content */
+.popup-button-content {
+  z-index: 3;
+  position: absolute;
+  left: calc(50% - 17.5vw);
+  top: calc(50% - 25vh);
+  width: 35vw;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 3rem;
+  padding: 1.5rem;
+  background-color: $background;
+}
+
+/* Close button */
+.button-popup .close {
+  position: relative;
+  display: block;
+}
+
+.button-popup .close::after {
+  right: -21.5vw;
+  top: -28vh;
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  font-size: 4rem;
+  content: "×";
+  width: 4.4rem;
+  height: 4.4rem;
+  cursor: pointer;
+}
+
+/* Lightbox overlay */
+.button-popup .close::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  content: "";
+  cursor: default;
+  z-index: 1;
+}
+
+/////////////////////////////////////////////////////
+
+footer {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.top-text {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.main {
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-text {
+  font-size: 2.3rem;
+}
+
+.main-content {
+  width: 70vw;
+  margin: auto;
+  padding: 2rem;
+  border: 2px solid $primary;
+  border-radius: 4rem;
+  text-align: center;
+  margin-bottom: 10vh;
+  box-shadow: 8px 10px 12px $redish, 12px 16px 8px rgba($redish, 0.6),
+    -6px -10px 12px $blueish;
+}
+
+.main-text {
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.main-image-image {
+  max-width: 50rem;
+  outline: 2px solid $primary;
+}
+
+.more-button {
+  margin-top: 40px;
+  font-size: 2.6rem;
+  border: 2px solid #1c110a;
+  padding: 0.6rem 1.8rem;
+  border-radius: 3rem;
+  background-color: #50a2a7;
+  cursor: pointer;
+  font-family: "Odibee Sans", cursive;
+  position: relative;
+  overflow: hidden;
+}
+
+.more-button:focus {
+  outline: none;
+}
+
+.more-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.more-button:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-image-image {
+    max-width: 65vw;
+  }
+}

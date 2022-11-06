@@ -1,0 +1,3 @@
+Welcome to Java!
+This is a Java program.
+I like programming in Java.

@@ -1,0 +1,67 @@
+//fonts
+
+$main-font: "Montserrat", sans-serif;
+$font2: "Castoro", serif;
+$switchfont1: "Rochester", cursive;
+$switchfont2: "Romanesco", cursive;
+$switchfont3: "Ropa Sans", sans-serif;
+
+//colors
+
+$background: #ffbe6a;
+$background-fashion: rgb(50, 117, 126);
+$background-fashion-border: rgb(197, 207, 216);
+$background-act: rgb(126, 81, 134);
+$background-act2: rgb(37, 7, 51);
+$food-background: rgb(255, 166, 0);
+$cities-box: rgb(47, 47, 47);
+
+$text-white: #fff;
+$text-black: #000;
+$text-darkgray: #a9a9a9;
+$text-gray: #808080;
+$text-lightgray: #d3d3d3;
+$text-brown: #2c210f;
+$text-lightblue: #81eef1;
+$box-shading: rgba(0, 0, 0, 0.4);
+$act-color: #d46000;
+
+$facebook-blue: #3b5998;
+$twitter-blue: #1da1f2;
+$youtube-red: #ff0000;
+$pinterest-red: #ff6267;
+$instagram-pink: #f00075;
+
+//animations and stuff
+
+@keyframes switchfont {
+  0% {
+    font-family: $switchfont1;
+  }
+  33% {
+    font-family: $switchfont2;
+    font-weight: 500;
+  }
+  66% {
+    font-family: $switchfont3;
+    font-weight: 600;
+  }
+}
+
+@keyframes text {
+  0% {
+    margin-bottom: 3rem;
+  }
+  30% {
+    letter-spacing: 2.5rem;
+    margin-bottom: 7rem;
+  }
+  70% {
+    letter-spacing: 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.text-animation {
+  animation: text 3s 1;
+}

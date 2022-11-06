@@ -1,0 +1,493 @@
+@import "_variables.scss";
+@import "_fashion.scss";
+@import "_mixins.scss";
+@import "_activities.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: $text-white;
+  font-family: $main-font;
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/////////////
+//Section 1//
+/////////////
+
+.section_1 {
+  background-color: white;
+}
+
+.header {
+  width: 100%;
+  background-color: white;
+}
+
+.header-title {
+  font-size: 5rem;
+  padding: 1.8rem 0;
+  letter-spacing: 2rem;
+  text-align: center;
+  color: $text-black;
+  font-family: $font2;
+}
+
+.navbar {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  color: $text-black;
+  font-size: 2.5rem;
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.sticky {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-link {
+  user-select: none;
+  text-decoration: none;
+  color: $text-black;
+}
+
+.mobile-menu-open,
+.mobile-menu-close {
+  display: none;
+}
+
+/////////////
+//Section 2//
+/////////////
+
+#home {
+  scroll-margin-top: 7rem;
+}
+
+.section_2 {
+  width: calc(100vw - (100vw - 100%));
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("images/main-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: opacity(90%);
+}
+
+.home {
+  color: $text-white;
+  width: min-content;
+  text-align: center;
+  height: min-content;
+  margin: auto;
+  font-family: $switchfont1;
+  transform: translateY(40vh);
+  animation: switchfont 5s infinite ease;
+}
+
+.home-ciao {
+  font-size: 8rem;
+  height: 10rem;
+  letter-spacing: 0.7rem;
+  text-shadow: -1px 1px 2px $text-black, 1px 1px 2px $text-black,
+    1px -1px 0 $text-black, -1px -1px 0 $text-black;
+  font-weight: 300;
+}
+
+.home-hello {
+  font-size: 3rem;
+  text-shadow: -1px 1px 2px $text-black, 1px 1px 2px $text-black,
+    1px -1px 0 $text-black, -1px -1px 0 $text-black;
+  font-weight: 500;
+}
+
+/////////////
+//Section 3//
+/////////////
+
+#cities {
+  scroll-margin-top: 7rem;
+}
+
+.section_3 {
+  height: 100vh;
+  background-image: url(img/italy_bg2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cities-location-box {
+  width: 17vw;
+  min-width: 25rem;
+  background-color: $cities-box;
+  position: relative;
+  float: right;
+  margin-right: 8vw;
+  top: 12vh;
+  color: $text-white;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px 5px $text-black;
+}
+
+.cities-location-box-title {
+  font-size: 2.5rem;
+  padding: 2rem 1rem;
+}
+
+.cities-location-box-image {
+  text-align: center;
+}
+
+.cities-location-box-image-img {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.cities-location-box-text {
+  font-size: 1.5rem;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.cities-location-box-text2 {
+  font-size: 1.5rem;
+  padding: 1rem 1rem 0rem 0rem;
+}
+
+.spacer123 {
+  opacity: 0;
+}
+
+.img_button {
+  width: 7.5rem;
+  height: 6rem;
+}
+
+.cities-location-choose-option {
+  width: 60vw;
+  margin-left: 20vw;
+  margin-top: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cities-loc {
+  cursor: pointer;
+  border: 0.4rem $text-white solid;
+  height: 6rem;
+}
+
+/////////////
+//Section 4//
+/////////////
+
+//in _activities.scss
+
+/////////////
+//Section 5//
+/////////////
+
+#food {
+  scroll-margin-top: 7rem;
+  background-color: $background;
+}
+
+.food-label {
+  @include flex-col;
+  text-align: center;
+  font-size: 3rem;
+  justify-content: center;
+  background-image: url("/img/foodcover.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 50vw;
+}
+
+.food-title {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  animation: text 3s 1;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0 10px black, 2px 2px 20px rgba(black, 0.6);
+}
+
+.food-subtitle {
+  font-size: 3rem;
+  color: $text-brown;
+  font-weight: 500;
+}
+
+.food-block-text {
+  color: $text-black;
+  opacity: 0;
+  width: 16vw;
+  height: 15vw;
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+
+.food-block-3-text,
+.food-block-6-text {
+  left: 0;
+  padding-left: 1.5vw;
+}
+
+.food-block-1-text,
+.food-block-2-text,
+.food-block-4-text,
+.food-block-5-text {
+  padding-right: 1.5vw;
+}
+
+.food-block:hover > .food-block-text {
+  opacity: 1;
+}
+
+.food-block-pic {
+  position: relative;
+  z-index: 2;
+}
+
+.food-img {
+  max-width: 15vw;
+  max-height: 15vw;
+  float: left;
+}
+
+.food-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 81vw;
+  height: 50vw;
+  padding: 5rem 0;
+  margin: auto;
+}
+
+.food-block {
+  width: 15vw;
+  height: 15vw;
+  position: relative;
+  transition: width 0.3s ease;
+  transition: 0.3s;
+  padding: 1.5vw;
+  overflow: hidden;
+  background-color: $food-background;
+}
+
+.food-block-1,
+.food-block-4 {
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+}
+
+.food-block-3,
+.food-block-6 {
+  margin-right: 2vw;
+}
+
+.food-block-2,
+.food-block-5 {
+  margin: 0 2vw;
+}
+
+.food-block:hover {
+  width: 33vw;
+}
+
+.food-block-3-pic,
+.food-block-6-pic {
+  float: right;
+}
+
+.food-section h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.food-section p {
+  font-size: 1.6rem;
+}
+
+/////////////
+//Section 6//
+/////////////
+
+// in _fashion.scss
+
+/////////////
+//Section 7//
+/////////////
+
+.section_7 {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer {
+  margin-top: 4rem;
+  width: 33%;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logos-logo {
+  height: 2.5rem;
+  filter: invert(1);
+}
+
+.footer-logos-link {
+  text-decoration: none;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+.footer-logos-link:nth-of-type(1) {
+  background-color: $facebook-blue;
+}
+
+.footer-logos-link:nth-of-type(2) {
+  background-color: $instagram-pink;
+}
+
+.footer-logos-link:nth-of-type(3) {
+  background-color: $twitter-blue;
+}
+
+.footer-logos-link:nth-of-type(4) {
+  background-color: $pinterest-red;
+}
+
+.footer-logos-link:nth-of-type(5) {
+  background-color: $youtube-red;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: $text-white;
+  font-size: 1.6rem;
+}
+
+.footer-links {
+  width: 22%;
+  display: flex;
+  font-size: 2.5rem;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: center;
+  text-align: left;
+  margin-left: 11%;
+}
+
+.footer-links a {
+  padding: 0.5rem 1.5rem;
+  color: $text-white;
+}
+
+.newsletter {
+  width: 33%;
+  @include flex-col;
+  justify-content: center;
+}
+
+.newsletter-content {
+  margin-left: 3.6%;
+}
+
+.content-name {
+  color: $text-white;
+  margin: auto;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.form-control {
+  height: 3rem;
+  width: 13vw;
+  border-color: $text-white;
+  margin-right: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.email-btn {
+  position: absolute;
+  height: 3rem;
+  min-width: 10.5rem;
+  text-align: center;
+  line-height: 3rem;
+  text-decoration: none;
+  border: 0.3rem solid white;
+  font-size: 2rem;
+  transition: 0.5s;
+  overflow: hidden;
+  color: white;
+}
+a .front {
+  transform: scale(1);
+  transition: 0.8s;
+}
+
+a .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(4);
+  transition: 0.8s;
+  background-color: white;
+  color: black;
+  opacity: 0;
+}
+
+a:hover .front {
+  transform: scale(0);
+}
+
+a:hover .back {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/// Mobile formatting
+
+@import "_mobile.scss";

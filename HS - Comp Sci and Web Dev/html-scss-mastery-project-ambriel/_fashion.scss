@@ -1,0 +1,111 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#fashion {
+  scroll-margin-top: 7rem;
+}
+
+.section_6 {
+  box-sizing: border-box;
+  scroll-margin-top: 7rem;
+}
+
+.fashion-header {
+  @include flex-col;
+  text-align: center;
+  height: 50vw;
+  justify-content: center;
+  background-image: url("/img/catwalk.jpg");
+  background-size: 100vw;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fashion-title {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  animation: text 3s 1;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0 10px black, 2px 2px 20px rgba(black, 0.6);
+}
+
+.fashion-subtitle {
+  font-size: 3rem;
+  color: $text-lightblue;
+  font-weight: 500;
+}
+
+.fashion-section {
+  background-color: $background-fashion;
+  overflow: hidden;
+}
+
+.fashion-milan {
+  @include flex-row;
+  justify-content: space-between;
+}
+
+.milan-text {
+  color: $text-white;
+  font-size: 2rem;
+  padding: 2rem;
+  margin-left: 1.2vw;
+  width: 70vw;
+  line-height: 3rem;
+}
+
+.fashion-milan-img {
+  width: 18vw;
+  min-width: 20rem;
+  padding: 1rem;
+  margin: 2vw 2vw 2vw auto;
+}
+
+.gallery {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fashion-gallery {
+  height: 70vh;
+  flex: 1;
+  transition: 1s;
+  background-repeat: no-repeat;
+}
+
+.fashion-gallery:hover {
+  flex: 2;
+  background-color: salmon;
+}
+
+.fashion-gallery:nth-of-type(1) {
+  background-image: url(/img/fashion4.jpg);
+  background-size: cover;
+}
+.fashion-gallery:nth-of-type(2) {
+  background-image: url(/img/fashion2.jpg);
+  background-size: cover;
+}
+.fashion-gallery:nth-of-type(3) {
+  background-image: url(/img/fashion3.jpg);
+  background-size: cover;
+}
+.fashion-gallery:nth-of-type(4) {
+  background-image: url(/img/fashion1.jpg);
+  background-size: cover;
+}
+.fashion-gallery:nth-of-type(5) {
+  background-image: url(/img/fashion5.jpg);
+  background-size: cover;
+}
+.fashion-gallery:nth-of-type(6) {
+  background-image: url(/img/fashion6.jpg);
+  background-size: cover;
+}
+//idk why its not showing up

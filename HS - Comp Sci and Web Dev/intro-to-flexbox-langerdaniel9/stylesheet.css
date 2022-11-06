@@ -1,0 +1,53 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  border: 3px solid gray;
+}
+
+.box {
+  padding: 10px;
+  width: 140px;
+  border: 2px solid black;
+  font-size: 2em;
+  flex: 1;
+}
+
+.box1 {
+  background-color: red;
+  flex: 3 1 200px;
+}
+
+.box2 {
+  background-color: orange;
+}
+
+.box3 {
+  background-color: yellow;
+}
+
+.box4 {
+  background-color: green;
+  flex: 3 1 200px;
+}
+
+.box5 {
+  background-color: blue;
+}
+
+.box6 {
+  background-color: indigo;
+  flex: 3 1 200px;
+}
+
+.box7 {
+  background-color: purple;
+}

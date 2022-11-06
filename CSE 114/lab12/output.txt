@@ -1,0 +1,6 @@
+old: Welcome to Java!
+new: Welcome to HTML!
+old: This is a Java program.
+new: This is a HTML program.
+old: I like programming in Java.
+new: I like programming in HTML.
